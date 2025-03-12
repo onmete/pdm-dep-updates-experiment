@@ -2,11 +2,13 @@ name: Update dependencies
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "0 6 * * 1"
 jobs:
   update-dependencies:
     runs-on: ubuntu-latest
     steps:
+      - name: Generate requirements.txt
+        run: make requirements.txt
       - uses: actions/checkout@v4
       - name: Update dependencies
         uses: pdm-project/update-deps-action@main
