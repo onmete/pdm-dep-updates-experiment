@@ -13,9 +13,8 @@ jobs:
         with:
           token: ${{ secrets.GH_TOKEN }}
           commit-message: "pdm: Update deps"
-          pr-title: "Update dependencies"
+          pr-title: "pdm: Automatic dependencies update"
           update-strategy: reuse
-          # The save strategy, can 'compatible', 'wildcard', 'exact' or 'minimum'
           save-strategy: minimum
           unconstrained: false
           install-plugins: "false"
