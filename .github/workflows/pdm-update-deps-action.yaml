@@ -1,6 +1,6 @@
 name: Update dependencies
 on:
-  workflow_dispatch
+  workflow_dispatch:
   schedule:
     - cron: "0 0 * * *"
 jobs:
